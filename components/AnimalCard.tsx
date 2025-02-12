@@ -30,7 +30,7 @@ export const AnimalCard = ({ props}: { props: AnimalProps}) => {
             </div>
             <Link
                 href={`/animal#${props.id}`}
-                className="mt-8 py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-900 hover:ease-in"
+                className="block mt-5 text-center text-blue-500 hover:underline text-lg font-semibold"
              >
                 Les mer
              </Link>
