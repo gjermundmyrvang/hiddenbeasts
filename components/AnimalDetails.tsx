@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { TextGenerateEffect } from './ui/text-generate-effect';
 
 interface Fact {
   id: number;
@@ -24,9 +25,7 @@ interface HomeProps {
 export const AnimalDetails: React.FC<HomeProps> = ({ animal }) => {
   return (
       <div className="max-w-4xl w-full bg-gray-900 p-8 rounded-2xl shadow-lg">
-        <h1 className="text-7xl font-bold text-center mb-6">
-          {animal.title}
-        </h1>
+        <TextGenerateEffect words={animal.title} className='my-10 text-center'/>
         <div className="relative w-full h-96 rounded-lg overflow-hidden mb-6">
           <Image 
             src={animal.image.src} 
