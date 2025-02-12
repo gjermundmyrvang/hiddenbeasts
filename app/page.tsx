@@ -1,3 +1,4 @@
+import { AnimalCard } from "@/components/AnimalCard";
 import { Header } from "@/components/Header";
 import { animals } from "@/data/animals"
 
@@ -12,14 +13,10 @@ export default function Home() {
       <div className="absolute pointer-events-none flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       {/* Content */}  
       <div className="max-w-7xl w-full flex flex-col justify-center items-center mx-auto overflow-hidden">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-5">
-          {animalData.map((d) => (
-            <h1>{d.navn}</h1>
+        {animalData.map((d, i) => (
+            <AnimalCard props={d} key={`${d.name}:` + i}/>
           ))}
-        </div>
       </div>
-
-
       </div>
       
     </main>
