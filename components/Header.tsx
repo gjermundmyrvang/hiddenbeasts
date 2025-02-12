@@ -1,4 +1,3 @@
-import { Spotlight } from "./ui/spotlight-new";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 
