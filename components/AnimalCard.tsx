@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 type AnimalProps = {
@@ -10,7 +11,8 @@ type AnimalProps = {
 };
 
 export const AnimalCard = ({ props}: { props: AnimalProps}) => {
-    const bg = props.id % 2 === 0 ? 'bg-gray-900 text-white' : 'bg-white text-gray-900';
+    const bg = props.id % 2 === 0 ? 'bg-slate-900 text-white' : 'bg-white text-gray-900';
+    
     return (
         <div className={`w-full max-w-4xl my-10 p-6 rounded-2xl shadow-lg ${bg} transition-all duration-300`}>
             <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-center border-b pb-2'>{props.name}</h1>
@@ -26,9 +28,11 @@ export const AnimalCard = ({ props}: { props: AnimalProps}) => {
                     <Image src={props.image.src} alt={props.image.alt} layout='responsive' width={500} height={500} />
                 </div>
             </div>
-            <a href={props.href} className='block mt-5 text-center text-blue-500 hover:underline text-lg font-semibold'>
+            <Link
+                href={`/animal#${props.id}`}
+             >
                 Les mer
-            </a>
+             </Link>
         </div>
     );
 };
