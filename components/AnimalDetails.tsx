@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { TextGenerateEffect } from './ui/text-generate-effect';
 
 interface Fact {
   id: number;
