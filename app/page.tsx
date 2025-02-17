@@ -12,7 +12,7 @@ export default function Home() {
       {/* Spotlight effect */}
       <div className="absolute pointer-events-none flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       {/* Content */}  
-      <div className="max-w-7xl w-full flex flex-col justify-center items-center mx-auto overflow-hidden">
+      <div className="max-w-7xl w-full flex flex-col justify-center items-center mx-auto overflow-hidden px-5 sm:px-none">
         {animalData.map((d, i) => (
             <AnimalCard props={d} key={`${d.name}:` + i}/>
           ))}

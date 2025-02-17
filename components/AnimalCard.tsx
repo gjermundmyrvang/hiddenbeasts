@@ -24,13 +24,13 @@ export const AnimalCard = ({ props}: { props: AnimalProps}) => {
                         </li>
                     ))}
                 </ul>
-                <div className='relative w-full h-64 md:h-auto rounded-lg overflow-hidden shadow-md'>
-                    <Image src={props.image.src} alt={props.image.alt} layout='responsive' width={500} height={500} />
-                </div>
+               
+                <Image src={props.image.src} alt={props.image.alt} layout='responsive' width={500} height={500} className='relative w-full h-64 md:h-auto rounded-lg overflow-hidden shadow-md'/>
+
             </div>
             <Link
                 href={`/animal#${props.id}`}
-                className="block mt-5 text-center text-blue-500 hover:underline text-lg font-semibold"
+                className="block mt-5 text-center text-blue-500 hover:underline text-lg font-semibold border-t pt-2"
              >
                 Les mer
              </Link>
